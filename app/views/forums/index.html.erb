@@ -1,0 +1,47 @@
+<section class="for-ind-sec1 row">
+
+<%=render "leftpanel" %>
+<div class="col-6">
+  <div class="main-content">
+  	<div class="for-ind-tit1">
+  	  <h2 class="text-center banner1">Featured Forums</h2>
+  	  <div style="float: right;margin-right: 26px;">
+	  </div>
+  	  <div class="list-group">
+  	     <% @featured.each do |forum| %> 
+          <a href=<%= forum_path(forum)%> >
+          <div class="for-ind-lis1">
+            <h3><%=forum.title.upcase%></h3>
+            <%= link_to "Edit", edit_forum_path(forum),class: "btn btn-outline-success"%>
+            <%= link_to "Delete", forum_path(forum),method: :delete,data: {confirm: "Arey kya hua?"},class: "btn btn-outline-success"%>
+            <p style="/*! margin-top: 59px; */margin: 3px 0px 0px 0px;font-size: small;color: #aaa;letter-spacing: 2px">by:<%=forum.user.email %>(<%=forum.viewed%> viewed)<span style="float: right"><%=time_ago_in_words(forum.created_at) %></span></p>
+            <p style="margin: 0px auto 0px auto;border-top: 1px solid #a3acd5"><%=truncate(forum.body.capitalize,length: 350) %><a style="color: black;" href=<%=forum_path(forum) %>>read more</a></p>
+          </div>
+          </a>
+        <% end %>
+
+      </div>
+
+      <h2 class="text-center banner1">New Forums</h2>
+      <%= link_to "New Forum",new_forum_path,{class: "btn btn-success float-right mr-4"}%>
+      <div class="list-group">
+        
+      	<% @forums.each do |forum| %> 
+          <a href=<%= forum_path(forum)%> >
+          <div class="for-ind-lis1">
+            <h3><%=forum.title.upcase%></h3>
+            <%= link_to "Edit", edit_forum_path(forum),class: "btn btn-outline-success"%>
+            <%= link_to "Delete", forum_path(forum),method: :delete,data: {confirm: "Arey kya hua?"},class: "btn btn-outline-success"%>
+            <p style="/*! margin-top: 59px; */margin: 3px 0px 0px 0px;font-size: small;color: #aaa;letter-spacing: 2px">by:<%=forum.user.email %>(<%=forum.viewed%> viewed)<span style="float: right"><%=time_ago_in_words(forum.created_at) %></span></p>
+            <p style="margin: 0px auto 0px auto;border-top: 1px solid #a3acd5"><%=truncate(forum.body.capitalize,length: 350) %><a style="color: black;" href=<%=forum_path(forum) %>>read more</a></p>
+          </div>
+          </a>
+        <% end %>
+
+      </div>
+  	</div>
+  </div>
+</div>
+
+<%=render "rightpanel"%>
+</section>

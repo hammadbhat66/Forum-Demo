@@ -1,0 +1,10 @@
+<section class="hom-ind-sec">
+  <div class="text-center">
+    <h1 class="hom-ind-h1">Welcome To Mobiloitte Forum Site</h1>
+    <%if user_signed_in?%>
+      <%= link_to "Open Forums",forums_path,class: "hom-ind-btn btn btn-outline-light" %>
+    <%else%>
+      <%= link_to "Login Here",new_user_session_path,class: "hom-ind-btn btn btn-outline-light" %>
+    <% end %>
+  </div>
+</section>

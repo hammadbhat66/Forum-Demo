@@ -1,0 +1,27 @@
+
+<div class="row">
+<%= render "leftpanel" %>
+<div class="for-ind-div2">
+	<div class="col-6 for-sho-mai1" style="/*! x: ; */max-width: 96%;">
+  	  <div class="for-sho-pos" id="for-sho-pos">
+			<h3><%=@forum.title.upcase%></h3>
+			<%= link_to "Edit", edit_forum_path(@forum),class: "btn btn-success"%>
+	  		<%= link_to "Delete", forum_path(@forum),method: :delete,data: {confirm: "Arey kya hua?"},class: "btn btn-success"%>
+			<p style="/*! margin-top: 59px; */margin: 3px 0px 0px 0px;font-size: small;color: #aaa;letter-spacing: 2px">by:<%=@forum.user.email %><span style="float: right"><%=time_ago_in_words(@forum.created_at) %></span>
+			</p>
+			<p style="margin: 0px auto 0px auto;border-top: 1px solid #a3acd5"><%=@forum.body.capitalize %></p>
+  	  </div>
+  	  <div class="for-sho-com1">
+  	  		<%=form_for [@forum,@comment],remote: :true do |com|%>
+  	  			<%=com.text_field :comment %>
+  	  			<%=com.submit %>
+  	  		<%end%>
+  	  <div class="for-sho-com2">
+  	    <%= render "comments/comment" %>
+  	  </div>
+  	  </div>
+
+	</div>
+</div>
+<%= render "rightpanel" %>
+</div>

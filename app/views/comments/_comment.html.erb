@@ -1,0 +1,12 @@
+<div>
+  <%@comments.each do |comm| %>
+      <div class="for-sho-com3">
+      	<span style="color: #bdbdbd">by:<%=comm.user.email%></span>
+      	<span style="float: right"><%=time_ago_in_words(comm.created_at)%></span>
+      	<div>
+ 		  <%=link_to "Delete", forum_comment_path(@forum,comm),method: :delete,remote: :true ,data: {confirm: "Aye you sure about that"}%>     	
+        </div>
+        <br><%=comm.comment%><br>
+    </div>
+  <%end%>
+</div>

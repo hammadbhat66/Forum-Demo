@@ -1,0 +1,21 @@
+<div class="row">
+<%= render "leftpanel"%>
+
+<div class="for-ind-div2">
+  <div class="col-6 for-sho-mai1" style="/*! x: ; */max-width: 96%;">
+  <div>
+  </div>
+  <div class="for-new-for1">
+    <%= form_for @forum do |forum| %>
+    <h1>Title</h1>
+    <div class="form-title"><%=forum.text_field :title %></div>
+    <h1>Body</h1>
+    <div class="form-body"><%=forum.text_area :body %></div>
+    <div class="form-avatar"><%=forum.file_field :avatar %></div>
+    <div class="form-submit"><%=forum.submit %></div>
+  <% end %>
+</div>
+</div>
+</div>
+<%= render "rightpanel"%>
+</div>

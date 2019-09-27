@@ -1,0 +1,8 @@
+                                   List of roles
+ Role name |                         Attributes                         | Member of 
+-----------+------------------------------------------------------------+-----------
+ hammad    |                                                            | {}
+ new_user  | Create DB                                                  | {}
+ newuser   |                                                            | {}
+ postgres  | Superuser, Create role, Create DB, Replication, Bypass RLS | {}
+
