@@ -7,6 +7,12 @@ background: rgba(216,85,96,0.33);
 nav{
 	background-color: #eee !important;
 }
+section .col-3 .col a{
+	font-weight: bold;
+}
+section .col-3 .col a:hover{
+	font-size: 15px;
+}
 
 .logo{
 	height: 8vh;
@@ -83,6 +89,8 @@ nav{
 	font-weight: bolder;
 	-webkit-box-shadow: 0px -2px 0px 0px rgba(238,255,253,0.22); 
 box-shadow: 0px -2px 0px 0px rgba(238,255,253,0.22);
+border-top: 5px solid rgba(213,213,213,0.24);
+border-radius: 20px;
 }
 .for-sho-mai1{
 	background-color: #f2f2f2;
@@ -100,7 +108,10 @@ box-shadow: 0px -2px 0px 0px rgba(238,255,253,0.22);
 
 }
 .for-ind-lis1 a{
-	color: #495057;
+	color: #270072;
+}
+.for-ind-lis1 a:hover{
+	text-decoration: none;
 }
 #forum_body{
 	width: 100%;
@@ -132,4 +143,26 @@ box-shadow: 0px -2px 0px 0px rgba(238,255,253,0.22);
 	border-bottom: 1px solid bisque;
 	background-color: floralwhite;
 	padding: 15px 30px 30px 30px;
+
+}
+.pro-sho-con2{
+	height: 40%;
+	background-color: #270072;
+	-webkit-box-shadow: 0px -4px 22px 14px rgba(0,0,0,0.77); 
+	box-shadow: 0px -4px 22px 14px rgba(0,0,0,0.77);
+}
+.pro-sho-ava1{
+	-webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 0px 0px 26px 28px rgba(255,255,255,0.32); 
+box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 0px 0px 26px 28px rgba(255,255,255,0.32);
+}
+.pro-sho-con3{
+	font-size: 8vw;
+text-align: center;
+text-transform: capitalize;
+transition: cubic-bezier(.86,0,.07,1);
+transform: translateY(90%);
+color: #FFFFFF;
+color: #FFFFFF;
+background: #ece9e9;
+text-shadow: -2px 4px 6px #472C47;;
 }
