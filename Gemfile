@@ -30,7 +30,7 @@ gem 'bootstrap', '~> 4.3.1'
 
 gem 'devise'
 
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave', '~> 2.1'
 
 gem 'will_paginate', '~> 3.1.0'
 
